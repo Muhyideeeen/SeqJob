@@ -1,0 +1,10 @@
+This is where i just save stuff nothing much here
+
+worker_1: celery -A core worker -l INFO
+worker_2: celery -A core beat -l INFO --scheduler django_celery_beat.schedulers:DatabaseScheduler
+
+
+#for windows development (this works only for windows marchine hould not be use for production)
+# when testing this celery on your windows machinge use rabbit mq else use Reddis wwith the command above
+#celery -A core beat -l INFO --scheduler django_celery_beat.schedulers:DatabaseScheduler
+#celery -A core  worker --loglevel=INFO --concurrency=2 -P solo

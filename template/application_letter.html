@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation</title>
+</head>
+<body>
+<h1>{{mail_subject}}</h1>
+
+<p><strong>Dear {{full_name}},</strong></p> 
+{% if letter_state == 'selected' %}
+
+
+<p>Congratulations!</p>
+
+<p>You have been selected for the role {{job_title}} at our company(<strong>{{company_name}}</strong>) based on your application. 
+
+    Our HR team will contact you shortly for further information about your offer letter and other necessary documentation. 
+    
+    We look forward to having you on our Team.
+</p>
+{% endif %}
+
+
+{% if letter_state == 'in_view' %}
+<p>{{job_title}}</p>
+<p>Thank you for your application for the above role.</p>
+
+<p>We have had a very large response for this role and the standard of candidate applications has been extremely high.</p>
+<p>
+    We have had a very large response for this role and the standard of candidate applications has been extremely high.
+</p>
+<br>
+<p>We very sorry to inform you that you have not been selected for this offer.
+    However, you have been added to our keep in view list which means once there is a vacancy in our company you will be part of the first set of people to be considered for the role. 
+    </p>
+{% endif %}
+
+
+
+{% if letter_state == 'not_selected' %}
+<p>{{job_title}}</p>
+<p>Thank you for your application for the above role.</p>
+<p>
+    We have had a very large response for this role and the standard of candidate applications has been extremely high.
+</p>
+<p>
+    We very sorry to inform you that unfortunately, on this occasion, there are candidates who more closely match our requirements and so on this occasion you have been unsuccessful.
+</p>
+<p>
+    However if I may, I would like to hold your 
+
+details on file and bear you in mind for any future roles that may be suitable.
+
+</p>
+<p>In the meantime, should you see any roles that interest you on our website please do not hesitate to contact us.</p>
+{% endif %}
+
+
+
+<br>
+<p>Regards</p>
+<p>Adetoun Adesanya.</p>
+<br><br><br>
+
+<p>E-Business Management,</p>
+<p>Sequential Jobs (A Division of E-Metric Suite Solutions)</p>
+<p>A Performance Management Automation Solution Provider</p>
+<br><br>
+<p><i>..Increasing your business growth and profitability advantage</i></p>
+<p><strong>DL: +234 801 177 9216 | www.sequentialjobs.com | www.emetricsuite.com</strong></p>
+</body>
+</html>
